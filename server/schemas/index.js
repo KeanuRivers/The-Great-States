@@ -1,6 +1,5 @@
-const mongoose = require ("mongoose")
-const User = require("../models/User")
+const typeDefs = require('./typeDefs');
+const resolvers = require('./resolvers');
 
-mongoose.connect("mongodb://localhost/states");
 
-new User({ name:"Keanu", email:"keanu22@gmail.com}"})
+module.exports = { typeDefs, resolvers}
