@@ -1,5 +1,3 @@
-// will have to change instances of 'myth' and 'state' will record on line 2
-// 3, 
 const { myth, state } = require('../models')
 
 const resolvers = {
