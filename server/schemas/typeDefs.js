@@ -10,7 +10,7 @@ const typeDefs = gql`
         _id: ID
         commentText: String 
         createdAt: String
-        commentAuthor: 
+        commentAuthor: String
     }
     type Query {
         myth:[Myth]!
