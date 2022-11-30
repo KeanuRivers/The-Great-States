@@ -41,7 +41,7 @@ const items: MenuItem[] = [
   getItem('Loggout', '17', <LogoutOutlined />),
 ];
 
-const Sider: React.FC = () => {
+const SideNav: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
@@ -64,4 +64,4 @@ const Sider: React.FC = () => {
   );
 };
 
-export default Sider;
+export default SideNav;

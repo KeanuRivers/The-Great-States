@@ -1,0 +1,16 @@
+{
+    "short_name": "Map",
+    "name": "US Map",
+    "icons": [
+      {
+        "src": "US-Blank-map.jpg",
+        "type": "image/jpg",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }
+  

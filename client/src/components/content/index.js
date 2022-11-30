@@ -1,5 +1,4 @@
 import React from 'react';
-import './index.css';
 import { HeartOutlined, DislikeOutlined, LikeOutlined, CommentOutlined } from '@ant-design/icons';
 import { Avatar, Card, List } from 'antd';
 
