@@ -30,7 +30,9 @@
       "graphql": "^16.6.0",
       "mongodb": "^4.12.1",
       "mongoose": "^6.7.4",
-      "node": "^19.1.0"
+      "node": "^19.1.0",
+      "jsonwebtoken": "^8.5.1",
+      "bcrypt": "^5.0.0"
     }
   }
   

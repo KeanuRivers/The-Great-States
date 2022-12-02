@@ -1,42 +1,89 @@
-const { myth, state } = require('../models')
+const { AuthenticationError } = require('apollo-server-express');
+const { User, myth } = require('../models');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
-    Query: {
-        myth: async()=> {
-            return myth.findOne({ _id: mythId })
-        },
-        
-        myth: async (parent, { mythId })=> {
-            return myth.findOne({_id: mythId})
-        }   
-}, 
+  Query: {
+    users: async () => {
+      return User.find().populate('comments');
+    },
+    user: async (parent, { username }) => {
+      return User.findOne({ username }).populate('comments');
+    },
+     comments: async (parent, { username }) => {
+      const params = username ? { username } : {};
+      return Comment.find(params).sort({ createdAt: -1 });
+    },
+    myth: async (parent, { commentId }) => {
+      return Comment.findOne({ _id: commentId });
+    },
+    me: async (parent, args, context) => {
+      if (context.user) {
+        return User.findOne({ _id: context.user._id }).populate('comments');
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+  },
 
-Mutation: {
-    addMyth: async (parent, {mythText}) => {
-        return myth.create({ mythText});
+  Mutation: {
+    addUser: async (parent, { username, email, password }) => {
+      const user = await User.create({ username, email, password });
+      const token = signToken(user);
+      return { token, user };
     },
-},
-    removeMyth: async (parent, { mythId }) => {
-        return Thought.findOneAndDelete({ _id: mythId});
-},
-    addComment: async (parent, { mythId, commentText}) => {
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw new AuthenticationError('No user found with this email address');
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
+    },
+
+    addComment: async (parent, { ID, commentText }, context) => {
+      if (context.user) {
         return myth.findOneAndUpdate(
-            { _id: mythId},
-            {$addToSet: { comments: {commentText}}
+          { _id: ID },
+          {
+            $addToSet: {
+              comments: { commentText, commentAuthor: context.user.username },
             },
-            
-            {new: true,
+          },
+          {
+            new: true,
             runValidators: true,
-            },
-            );
-    },
-    removeComment: async (parent, {mythId, commentId}) => {
-        return myth.findOneAndUpdate(
-            { _id: mythId },
-            { $pull: {comments: {_id: commentId} } },
-            { new: true }
+          }
         );
-    }
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    removeComment: async (parent, { ID, commentId }, context) => {
+      if (context.user) {
+        return myth.findOneAndUpdate(
+          { _id: ID },
+          {
+            $pull: {
+              comments: {
+                _id: commentId,
+                commentAuthor: context.user.username,
+              },
+            },
+          },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+  },
 };
 
 module.exports = resolvers;
