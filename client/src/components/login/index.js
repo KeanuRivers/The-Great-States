@@ -3,8 +3,8 @@ import './index.css';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input } from 'antd';
 
-const loggin: React.FC = () => {
-  const onFinish = (values: any) => {
+const login: React.FC = () => {
+  const onFinish = (values: ) => {
     console.log('Received values of form: ', values);
   };
 
@@ -42,4 +42,4 @@ const loggin: React.FC = () => {
   );
 };
 
-export default loggin;
+export default login;
