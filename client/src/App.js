@@ -1,43 +1,34 @@
 import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-// import Home from './pages/Home';
-// import Matchup from './pages/Matchup';
-// import Vote from './pages/Vote';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import Home from './pages/Home';
+import Login from './pages/Login'
+import Register from './pages/Register'
 // import NotFound from './pages/NotFound';
 
-// const client = new ApolloClient({
-//   uri: '/graphql',
-//   cache: new InMemoryCache(),
-// });
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    <div>Server test</div>
-    // <ApolloProvider client={client}>
-    //   <Router>
-    //     <div className="flex-column justify-center align-center min-100-vh bg-primary">
-    //       <Routes>
-    //         <Route 
-    //           path="/" 
-    //           element={<Home />}
-    //         />
-    //         {/* <Route 
-    //           path="/matchup" 
-    //           element={<Matchup />}
-    //         />
-    //         <Route 
-    //           path="/matchup/:id" 
-    //           element={<Vote />}
-    //         />
-    //         <Route 
-    //           path="*"
-    //           element={<NotFound />}
-    //         /> */}
-    //       </Routes>
-    //     </div>
-    //   </Router>
-    // </ApolloProvider>
+    <ApolloProvider client={client}>
+      <Router>
+        <div className="flex-column justify-center align-center min-100-vh bg-primary">
+          <Routes>
+            <Route 
+              path="/" 
+              element={<Home />}
+            />
+            <Route 
+              path="*"
+              element={<NotFound />}
+            />
+          </Routes>
+        </div>
+      </Router>
+    </ApolloProvider>
   );
 }
 
