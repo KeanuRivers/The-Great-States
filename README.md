@@ -1,5 +1,9 @@
 # The-Great-States
 
+## Description
+
+Discover mysteries from all across the United States and discuss them with your fellow explorers.
+
 ## Features
 Myths from various states, currently including: 
  - Alabama
@@ -14,3 +18,7 @@ Myths from various states, currently including:
  - Georgia
  
  And more coming soon!
+
+## Coming Soon
+
+- Ability to submit your own stories
