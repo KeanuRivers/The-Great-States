@@ -21,4 +21,4 @@ Myths from various states, currently including:
 
 ## Coming Soon
 
-- Ability to submit your own stories
+- Ability to submit your own Myths
