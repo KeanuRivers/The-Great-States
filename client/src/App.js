@@ -25,7 +25,7 @@ function App() {
           <Menu
             theme="dark"
             mode="horizontal"
-            defaultSelectedKeys={["4"]}
+            defaultSelectedKeys={["2"]}
             items={[
               {
                 key: "/",
@@ -34,10 +34,6 @@ function App() {
               {
                 key: "/login",
                 label: "Login",
-              },
-              {
-                key: "/register",
-                label: "Register",
               },
             ]}
             onClick={({ key }) => {
@@ -71,9 +67,10 @@ function App() {
             textAlign: "center",
           }}
         >
-          The Great States!
+          Ant Design ©2018 Created by Ant UED
         </Footer>
       </Layout>
+
     </ApolloProvider>
   );
 }
