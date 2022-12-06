@@ -1,11 +1,14 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, myth } = require('../models');
+const { User, Myth } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     users: async () => {
       return User.find().populate('comments');
+    },
+    myths: async () => {
+      return Myth.find();
     },
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate('comments');
@@ -49,40 +52,7 @@ const resolvers = {
       return { token, user };
     },
 
-    addComment: async (parent, { ID, commentText }, context) => {
-      if (context.user) {
-        return myth.findOneAndUpdate(
-          { _id: ID },
-          {
-            $addToSet: {
-              comments: { commentText, commentAuthor: context.user.username },
-            },
-          },
-          {
-            new: true,
-            runValidators: true,
-          }
-        );
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-    removeComment: async (parent, { ID, commentId }, context) => {
-      if (context.user) {
-        return myth.findOneAndUpdate(
-          { _id: ID },
-          {
-            $pull: {
-              comments: {
-                _id: commentId,
-                commentAuthor: context.user.username,
-              },
-            },
-          },
-          { new: true }
-        );
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
+
   },
 };
 

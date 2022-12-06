@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Hell's Gate Bridge",
+        "mythText": "The Legend associated with Hell's Gate Bridge — one, that if you drive your car out to the middle of the bridge and turn off the lights, the couple will magically appear in your car and leave a wet spot on the seat.",
+        "mythState": "Alabama"
+    },
+    {
+        "name": "The Kushtaka of the Alaskan Triangle",
+        "mythText": "The legend of Alaska involves the reason why 5 out of 1,000 people go missing. The Kushtaka are shape-shifters (half-man, half-otter) who lure women and children to the water with fake cries in order to steal their human spirits and drown them.",
+        "mythState":"Alaska"
+    },
+    {
+        "name": "The Ghost of Slaughterhouse Canyon",
+        "mythText": "Slaughterhouse Canyon tells the gruesome tale of a 19th-century gold miner who failed to come home to his family one night. Without his earnings, the mother and her children couldn't buy food and began to starve. When she couldn't stand it any longer, the wife chopped her kids into pieces, tossed them into the nearby river, and died of despair. Her cries can still be heard echoing through the canyon.",
+        "mythState": "Arizona"
+    },
+    {
+        "name": "The Gurdon Light",
+        "mythText": "The myth of the Gurdon Lights has many variations, but the one I will tell is the only one you need to know. The myth goes like this: The railroad worker bore a violent grudge against his boss who had fired him. He murdered his former employer with a railroad spike, and the victim now wanders the tracks.",
+        "mythState":"Arkansas"
+    },
+    {
+        "name": "The Char-Man",
+        "mythText": "The story of the Char-Man goes like this: A father and son house was caught on fire, were horribly burned. After the Fire the son became mentally unstable and killed his father. When the police found the son he was stil burned and they did not realze he was alive and he was able to escape. Ever Since then,  the Char-Man can be spotted wandering the woods surrounding Ojai, occasionally approaching tents of innocent campers, or pretending to be a hitchhiker and then attempting to attack them.",
+        "mythState":"California"
+    },
+    {
+        "name": "The Ridge Home Asylum",
+        "mythText": "The Ridge Home Asylum was opened in Arvada,CO. It reportedly housed patients who were horribly mistreated—some of whom weren't even mentally incapable, but had just been forsaken by their family. Though it was demolished in 2004, people say they can still hear the screams and see the apparitions of former patients on the grounds.",
+        "mythState":"Colorado"
+    },
+    {
+        "name": "Dudleytown",
+        "mythText": "The misfortunes that have occurred in Dudleytown are so terrible and numerous that its nickname is “the Village of the Damned.” The now completely deserted town is said to have been home to many suicides, disappearances, and even demonic activity. It is believed that the founders of the village—and by extension, the village itself—are forever cursed",
+        "mythState": "Connecticut"
+    },
+    {
+        "name": "Fort Delaware",
+        "mythText": "A prisoner camp during the Civil War, Fort Delaware in Delaware City was ultimately home to more 30,000 Confederate soldier inmates. The few thousand that died before they could leave the Union fort are said to still haunt the area.",
+        "mythState":"Delaware"
+    },
+    {
+        "name": "Captain Tony's",
+        "mythText": "Since 1852, Captain Tony's, the oldest saloon in Key West, has been known to be haunted: doors slam for no apparent reasons and there are inexplicable banging noises and frequent ghostly visitations. Perhaps that's because it's the site of the town's original morgue and was built around a tree that the town once used for hanging pirates!",
+        "mythState":"Florida"
+    },
+    {
+        "name": "The Ghost Town of Lake Lanier",
+        "mythText": "Lake Lanier has a decidedly eerie feel about it. There have been an unusual number of freak accidents and deaths on the lake in 2011, there were 17 deaths alone. Many of the people who drowned have been recovered. People have reported feeling arms and legs in the water, but have not been able to find them right after, leading people to believe that spirits still roam the lake.",
+        "mythState":"Georgia"
+    },
+    {
+        "name": "Mercy Brown",
+        "mythText":"In 1892, a farmer named George Brown lost his wife Mary, then his daughter Mary, and then his daughter Mercy. When his son Edwin was teetering on the edge of death with the same mysterious symptoms (which today we know to be those of tuberculosis), George and the villagers exhumed the bodies of the two Marys to see if they were actually vampires preying on the living members of the family. Finding nothing but bones, they turned to Mercy's body. Some say she was exhumed from the ground. Others say that since she died in the month of January, her body would have been kept in a nearby crypt until the thaw. Either way, the citizens of Exeter found the body to be suspiciously well-preserved, so they cut out Mercy's heart, burned it, and then had Edwin drink the ashes. He still died, but nobody else in the Brown family seemed to be affected after that.",
+        "mythState": "Rhode Island"
+    }
+]

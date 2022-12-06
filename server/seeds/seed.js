@@ -1,13 +1,13 @@
 const db = require('../config/connection');
-const { Tech, Matchup } = require('../models');
+const { Myth } = require('../models');
 
 const stateData = require('./stateData.json');
 
 db.once('open', async () => {
-  await Tech.deleteMany({});
-  await Matchup.deleteMany({});
+  await Myth.deleteMany({});
 
-  const technologies = await Tech.insertMany(techData);
+
+  const technologies = await Myth.insertMany(stateData);
 
   console.log('States seeded!');
   process.exit(0);
