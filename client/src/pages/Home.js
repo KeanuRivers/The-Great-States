@@ -1,6 +1,6 @@
 import React from "react";
 import { LikeOutlined, MessageOutlined, StarOutlined } from '@ant-design/icons';
-import { Avatar, List, Space, Button, } from 'antd';
+import { List, Space, Button, avatar } from 'antd';
 import { Descriptions } from "antd";
 import { useQuery } from "@apollo/client";
 import headerimage from "../assets/images/area51.jpeg"
@@ -50,8 +50,9 @@ const HomePage = () => {
             ]}
           >
             <List.Item.Meta
-              // avatar={<Avatar src={item.avatar} />}
+
               title={item.name}
+              avatar={item.mythState}
               description={item.mythText} />
             {item.content}
           </List.Item>
