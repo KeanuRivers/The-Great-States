@@ -11,6 +11,7 @@ type User {
   }
     type myth {
         _id: ID
+        name: String
         mythText: String
         mythState: String
         comments: [comment]!
