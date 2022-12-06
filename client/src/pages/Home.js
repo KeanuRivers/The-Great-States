@@ -1,20 +1,8 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
-
-import Sider from '../components/Sider';
-import content from '../components/content';
-
-
+import React from "react";
+import { useQuery } from "@apollo/client";
 
 const Home = () => {
-
-    return (
-        <main>
-            <div className="flex-row justify-center">
-
-            </div>
-        </main>
-    );
+  return <main>Home</main>;
 };
 
 export default Home;
