@@ -14,7 +14,6 @@ type User {
         name: String
         mythText: String
         mythState: String
-        comments: [comment]!
     }
     type comment {
         _id: ID
@@ -29,7 +28,8 @@ type User {
     type Query {
         users: [User]
         user(username: String!): User
-        myth:[myth]!
+        myths:[myth]
+        myth: myth
         comments(_id: String): [myth]
         me: User
     }

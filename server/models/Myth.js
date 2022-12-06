@@ -1,15 +1,23 @@
 const { Schema, model } = require("mongoose");
 
-const stateSchema = new Schema({
+const mythSchema = new Schema({
     name: {
         type: String,
         required: true,
         unique: true,
     },
 
-    myth: {
+    mythText: {
+        type: String,
+        required: true,
+
+    },
+    mythState: {
         type: String,
         required: true,
 
     },
 })
+const Myth = model('Myth', mythSchema)
+
+module.exports = Myth;
