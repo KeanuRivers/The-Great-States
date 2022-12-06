@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const QUERY_MYTH = gql`
     query myth{
-        myth {
+        myths {
             _id
             name
             mythText
