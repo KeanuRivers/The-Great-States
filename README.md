@@ -22,4 +22,4 @@ Myths from various states, currently including:
 ## Coming Soon
 
 - Ability to submit your own Myths.
-- Myths from Rhode Island, Pennslyvania, Wisconsin, and soon the rest of the 50 states!
+- Myths from Pennslyvania, Wisconsin, and soon the rest of the 50 states!
